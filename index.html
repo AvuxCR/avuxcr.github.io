@@ -1,6 +1,7 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
+<link href='https://fonts.googleapis.com/css?family=Doto' rel='stylesheet'>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>lawyerdog/cat/kat</title>
@@ -11,8 +12,8 @@
             box-sizing: border-box;
         }
 
-        body {
-            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, sans-serif;
+       body {
+    font-family: 'Doto';font-size: 16px;
             background: #0a0a0a;
             color: #ffffff;
             min-height: 100vh;
@@ -22,7 +23,7 @@
             padding: 2rem;
             overflow-x: hidden;
             position: relative;
-        }
+             }
 
         .background-animation {
             position: fixed;
@@ -42,7 +43,7 @@
                 rgba(30, 144, 255, 0.3), 
                 rgba(255, 20, 147, 0.3)
             );
-            filter: blur(40px);
+            filter: blur(100px);
             animation: float 20s infinite ease-in-out;
         }
 
@@ -92,6 +93,7 @@
             66% { transform: translateY(20px) rotate(240deg); }
         }
 
+
         .container {
             max-width: 650px;
             width: 100%;
@@ -102,27 +104,15 @@
             padding: 4rem 3rem;
             box-shadow: 
                 0 8px 32px rgba(0, 0, 0, 0.4),
-                inset 0 1px 0 rgba(255, 255, 255, 0.1),
+                inset 0 0px 0 rgba(255, 255, 255, 0.1),
                 0 0 80px rgba(138, 43, 226, 0.1);
-            border: 1px solid rgba(255, 255, 255, 0.15);
+            border: 0px solid rgba(255, 255, 255, 0.05);
             text-align: center;
             position: relative;
             overflow: hidden;
         }
 
-        .container::before {
-            content: '';
-            position: absolute;
-            top: 0;
-            left: 0;
-            right: 0;
-            height: 1px;
-            background: linear-gradient(90deg, 
-                transparent, 
-                rgba(255, 255, 255, 0.4), 
-                transparent
-            );
-        }
+
 
         .profile-image {
             width: 160px;
@@ -130,18 +120,17 @@
             border-radius: 50%;
             margin: 0 auto 2rem;
             background: linear-gradient(135deg, 
-                rgba(138, 43, 226, 0.8), 
-                rgba(30, 144, 255, 0.8)
+                rgba(42, 1, 52, 0.3), 
+                rgba(30, 144, 255, 0.2)
             );
             display: flex;
-            align-items: center;
+            align-items:center;
             justify-content: center;
             font-size: 4rem;
             color: white;
-            border: 2px solid rgba(255, 255, 255, 0.3);
             box-shadow: 
-                0 8px 32px rgba(0, 0, 0, 0.3),
-                inset 0 1px 0 rgba(255, 255, 255, 0.2);
+                0 0px 32px rgba(0, 0, 0, 0.3),
+                inset 0 0px 0 rgba(255, 255, 255, 0.2);
             backdrop-filter: blur(10px);
             position: relative;
             overflow: hidden;
@@ -159,12 +148,7 @@
                 rgba(255, 255, 255, 0.1), 
                 transparent
             );
-            animation: shimmer 3s infinite;
-        }
 
-        @keyframes shimmer {
-            0% { transform: translateX(-100%) translateY(-100%) rotate(45deg); }
-            100% { transform: translateX(100%) translateY(100%) rotate(45deg); }
         }
 
         h1 {
@@ -190,9 +174,9 @@
         }
 
         .bio {
-            font-size: 1.1rem;
-            line-height: 1.7;
-            color: rgba(255, 255, 255, 0.9);
+            font-size: 1.05rem;
+            line-height: 1.6;
+            color: rgba(255, 255, 255, 1);
             margin-bottom: 3rem;
             max-width: 500px;
             margin-left: auto;
@@ -201,7 +185,6 @@
             backdrop-filter: blur(10px);
             padding: 2rem;
             border-radius: 20px;
-            border: 1px solid rgba(255, 255, 255, 0.1);
         }
 
         .social-links {
@@ -220,11 +203,10 @@
             background: rgba(255, 255, 255, 0.1);
             backdrop-filter: blur(15px);
             -webkit-backdrop-filter: blur(15px);
-            border-radius: 25px;
+            border-radius: 20px;
             text-decoration: none;
             color: rgba(255, 255, 255, 0.9);
             transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
-            border: 1px solid rgba(255, 255, 255, 0.2);
             font-weight: 500;
             position: relative;
             overflow: hidden;
@@ -242,7 +224,7 @@
                 rgba(255, 255, 255, 0.2), 
                 transparent
             );
-            transition: left 0.6s ease;
+            transition: left 0s ease;
         }
 
         .social-link:hover::before {
@@ -251,29 +233,25 @@
 
         .social-link:hover {
             background: rgba(255, 255, 255, 0.2);
-            transform: translateY(-3px) scale(1.05);
+            transform: translateY(-1px) scale(1.01);
             box-shadow: 
                 0 10px 40px rgba(0, 0, 0, 0.3),
-                0 0 20px rgba(138, 43, 226, 0.4);
+                0 0 20px rgba(67, 19, 112, 0.7);
             color: white;
-            border-color: rgba(255, 255, 255, 0.4);
+            border-color: rgba(67, 19, 112, 0);
         }
 
         .social-icon {
-            width: 22px;
-            height: 22px;
+            width: 20px;
+            height: 20px;
             fill: currentColor;
-            transition: transform 0.3s ease;
-        }
-
-        .social-link:hover .social-icon {
-            transform: scale(1.1);
+           
         }
 
         .footer {
             margin-top: 2rem;
             padding-top: 2rem;
-            border-top: 1px solid rgba(255, 255, 255, 0.1);
+            border-top: 0px solid rgba(255, 255, 255, 0.1);
             font-size: 0.95rem;
             color: rgba(255, 255, 255, 0.7);
             background: rgba(255, 255, 255, 0.03);
@@ -281,24 +259,6 @@
             border-radius: 15px;
             padding: 1.5rem;
             margin: 2rem -1rem -1rem -1rem;
-        }
-
-        .particles {
-            position: absolute;
-            width: 100%;
-            height: 100%;
-            top: 0;
-            left: 0;
-            pointer-events: none;
-        }
-
-        .particle {
-            position: absolute;
-            width: 2px;
-            height: 2px;
-            background: rgba(255, 255, 255, 0.5);
-            border-radius: 50%;
-            animation: particles 10s infinite linear;
         }
 
         @keyframes particles {
@@ -334,6 +294,91 @@
                 padding: 1.5rem;
             }
         }
+        
+        
+          .clock-widget {
+            position: fixed;
+            bottom: 1rem;
+            right: 1rem;
+            background: rgba(255, 255, 255, 0.08);
+            backdrop-filter: blur(25px);
+            -webkit-backdrop-filter: blur(25px);
+            border-radius: 25px;
+            padding: 2rem 2.5rem;
+            text-align: center;
+            overflow: hidden;
+            min-width: 30px;
+            min-length: 60px;
+            transition: all 0.3s ease;
+            z-index: 1000;
+            color: rgba(255, 255, 255, 0.7);
+
+        }
+
+        .time-display {
+            font-size: 3rem;
+            font-weight: 700;
+            background: linear-gradient(135deg, 
+                #ffffff, 
+                #e0e0e0, 
+                #ffffff
+            );
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+            text-shadow: 0 0 00px rgba(255, 255, 255, 0.7)
+            margin-bottom: 0.5rem;
+            letter-spacing: 2px;
+        }
+
+        .date-display {
+            font-size: 1.1rem;
+            color: rgba(255, 255, 255, 0.7);
+            margin-bottom: 0.5rem;
+            font-weight: 300;
+        }
+        .seconds {
+            font-size: 1.5rem;
+            color: rgba(255, 255, 255, 0.7);
+            font-weight: 300;
+        }
+
+        .time-separator {
+            animation: blink 1s infinite;
+        }
+
+        @keyframes blink {
+            0%, 50% { opacity: 1; }
+            51%, 100% { opacity: 0.3; }
+
+        }
+
+        @media (max-width: 768px) {
+            .clock-widget {
+                bottom: 1rem;
+                right: 1rem;
+                padding: 1rem 1em;
+                min-width: 24px;
+            }
+            
+            .time-display {
+                font-size: 2rem;
+
+            }
+        }
+
+        @media (max-width: 480px) {
+            .clock-widget {
+                bottom: 1rem;
+                right: 1rem;
+                left: 1rem;
+                min-width: auto;
+            }
+            
+            .time-display {
+                font-size: 2em;
+            }
+        }
     </style>
 </head>
 <body>
@@ -354,7 +399,7 @@
         <p class="subtitle"></p>
         
         <div class="bio">
-            hello, i am an 18 year old college student in california. i am currently interested in web design and photography, and i occasionally play video games. 
+            hello, i am an 18 year old college student in california. i occasionally play video games. 
         </div>
         
         <div class="social-links">
@@ -405,45 +450,14 @@
             <p>contact me via discord; lawyerkat</p>
         </div>
     </div>
-
+    <div class="clock-widget">
+        <div class="time-display" id="time">
+            <span id="hours">00</span>
+        </div>
+        <div class="location-display">utc-8
+    </div>
     <script>
-        // Interactive particle system
-        function createParticles() {
-            const particleContainer = document.getElementById('particles');
-            
-            setInterval(() => {
-                const particle = document.createElement('div');
-                particle.className = 'particle';
-                particle.style.left = Math.random() * 100 + '%';
-                particle.style.animationDelay = Math.random() * 2 + 's';
-                particle.style.animationDuration = (Math.random() * 3 + 7) + 's';
-                
-                particleContainer.appendChild(particle);
-                
-                setTimeout(() => {
-                    particle.remove();
-                }, 10000);
-            }, 2000);
-        }
-
-        // Mouse interaction with background shapes
-        document.addEventListener('mousemove', (e) => {
-            const shapes = document.querySelectorAll('.floating-shape');
-            const mouseX = e.clientX / window.innerWidth;
-            const mouseY = e.clientY / window.innerHeight;
-            
-            shapes.forEach((shape, index) => {
-                const speed = (index + 1) * 0.5;
-                const x = (mouseX - 0.5) * speed;
-                const y = (mouseY - 0.5) * speed;
-                
-                shape.style.transform = `translate(${x}px, ${y}px)`;
-            });
-        });
-
-        // Initialize particles
-        createParticles();
-
+    
         // Add interactive glow effect to container
         const container = document.querySelector('.container');
         document.addEventListener('mousemove', (e) => {
@@ -454,6 +468,43 @@
             container.style.setProperty('--mouse-x', x + 'px');
             container.style.setProperty('--mouse-y', y + 'px');
         });
+           function updateClock() {
+            const now = new Date();
+            
+            // Convert to Los Angeles time (Pacific Time)
+            const laTime = new Date(now.toLocaleString("en-US", {timeZone: "America/Los_Angeles"}));
+            
+            // Get hours, minutes, seconds
+            let hours = laTime.getHours();
+            let minutes = laTime.getMinutes();
+            let seconds = laTime.getSeconds();
+            
+            // Convert to 12-hour format
+            const ampm = hours >= 12 ? 'PM' : 'AM';
+            hours = hours % 12;
+            hours = hours ? hours : 0; // 0 should be 12
+            
+            // Add leading zeros
+            minutes = minutes.toString().padStart(2, '0');
+            
+            // Update display
+            document.getElementById('hours').textContent = hours;
+            document.getElementById('minutes').textContent = minutes;
+            document.getElementById('seconds').textContent = seconds + ' ' + ampm;
+            
+            // Update date
+            const options = { 
+                year: 'numeric', 
+                month: 'numeric', 
+                day: 'numeric',
+                timeZone: 'America/Los_Angeles'
+            };
+            document.getElementById('date').textContent = now.toLocaleDateString('en-US', options);
+        }
+
+        // Update clock immediately and then every second
+        updateClock();
+        setInterval(updateClock, 1000);
     </script>
 </body>
 </html>

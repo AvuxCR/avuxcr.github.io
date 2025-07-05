@@ -18,17 +18,19 @@
             box-sizing: border-box;
         }
 
-       body {
-    font-family: 'Doto';font-size: 18px;
+  	     body {
+    		font-family: 'Doto';
+            font-size: 18px;
             background: #0a0a0a;
             color: #ffffff;
             min-height: 100vh;
             display: flex;
+            flex-direction: column;
             align-items: center;
             justify-content: center;
             padding: 2rem;
             overflow-x: hidden;
-            position: fixed;
+            position: relative;
              }
 
         .background-animation {
@@ -99,11 +101,10 @@
             66% { transform: translateY(20px) rotate(240deg); }
         }
 
-
         .container {
             max-width: 650px;
             width: 100%;
-            background: rgba(255, 255, 255, 0.08);
+            background: rgba(255, 255, 255, 0.03);
             backdrop-filter: blur(25px);
             -webkit-backdrop-filter: blur(25px);
             border-radius: 30px;
@@ -116,7 +117,8 @@
             text-align: center;
             position: relative;
             overflow: hidden;
-        }
+                    margin-bottom: 2rem;
+		}
 
 
 
@@ -140,20 +142,7 @@
             backdrop-filter: blur(10px);
             position: relative;
             overflow: hidden;
-        }
-
-        .profile-image::before {
-            content: '';
-            position: absolute;
-            top: -50%;
-            left: -50%;
-            width: 200%;
-            height: 200%;
-            background: linear-gradient(45deg, 
-                transparent, 
-                rgba(255, 255, 255, 0.1), 
-                transparent
-            );
+       
 
         }
 
@@ -248,10 +237,10 @@
         }
 
         .social-icon {
-            width: 20px;
-            height: 20px;
+            width: 22px;
+            height: 22px;
             fill: currentColor;
-           
+
         }
 
         .footer {
@@ -279,17 +268,17 @@
                 padding: 2.5rem 2rem;
                 margin: 1rem;
             }
-            
+
             h1 {
                 font-size: 2.2rem;
             }
-            
+
             .social-links {
                 flex-direction: column;
                 align-items: center;
                 gap: 0.8rem;
             }
-            
+
             .social-link {
                 width: 100%;
                 max-width: 300px;
@@ -300,13 +289,13 @@
                 padding: 1.5rem;
             }
         }
-        
-        
+
+
           .clock-widget {
-            position: relative;
+            position: fixed;
             bottom: 1rem;
             right: 1rem;
-            background: rgba(255, 255, 255, 0.08);
+            background: rgba(255, 255, 255, 0.05);
             backdrop-filter: blur(25px);
             -webkit-backdrop-filter: blur(25px);
             border-radius: 25px;
@@ -316,8 +305,9 @@
             min-width: 30px;
             min-length: 60px;
             transition: all 0.3s ease;
-            z-index: 1000;
+            z-index: 1;
             color: rgba(255, 255, 255, 0.7);
+flex-direction: column;
 
         }
 
@@ -335,29 +325,9 @@
             text-shadow: 0 0 00px rgba(255, 255, 255, 0.7)
             margin-bottom: 0.5rem;
             letter-spacing: 2px;
-        }
-
-        .date-display {
-            font-size: 1.1rem;
-            color: rgba(255, 255, 255, 0.7);
-            margin-bottom: 0.5rem;
-            font-weight: 300;
-        }
-        .seconds {
-            font-size: 1.5rem;
-            color: rgba(255, 255, 255, 0.7);
-            font-weight: 300;
-        }
-
-        .time-separator {
-            animation: blink 1s infinite;
-        }
-
-        @keyframes blink {
-            0%, 50% { opacity: 1; }
-            51%, 100% { opacity: 0.3; }
 
         }
+
 
         @media (max-width: 768px) {
             .clock-widget {
@@ -366,23 +336,24 @@
                 padding: 1rem 1em;
                 min-width: 24px;
             }
-            
+
             .time-display {
                 font-size: 2rem;
 
             }
         }
 
-        @media (max-width: 480px) {
+        @media (max-width: auto) {
             .clock-widget {
-                bottom: 1rem;
+                top: 1rem;
+				bottom: 1rem;
                 right: 1rem;
                 left: 1rem;
                 min-width: auto;
             }
-            
+
             .time-display {
-                font-size: 2em;
+                font-size: 2rem;
             }
         }
     </style>
@@ -398,9 +369,9 @@
 
    <div class="container">
         <div class="profile-image">
-            <img src="https://avatars.githubusercontent.com/u/99319957?s=400&u=e1f52f1ea2c21672b9939c025f7342d0af4dca79&v=4" style="width: 100%; height: 100%; object-fit: cover; border-radius: 50%;">
+            <img src="https://avatars.githubusercontent.com/u/99319957?s=400&u=e1f52f1ea2c21672b9939c025f7342d0af4dca79&v=4" style="width: 100%; height: 100%; object-fit: cover; border-radius: 25%;">
         </div>
-        
+
          <h1>daniel</h1>
         <p class="subtitle"> he/him, 18</p>
 
@@ -422,7 +393,7 @@
 </svg>
                 instagram         
             </a>
-            
+
             <a href="https://www.last.fm/user/lawyerdawg" class="social-link">
 <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-vinyl" viewBox="0 0 16 16">
   <path d="M8 15A7 7 0 1 1 8 1a7 7 0 0 1 0 14m0 1A8 8 0 1 0 8 0a8 8 0 0 0 0 16"/>
@@ -433,7 +404,7 @@ last.fm
             </a>    
             <a href="https://www.tiktok.com/@.lawyerdog" class="social-link">
                 <svg class="social-icon" viewBox="0 0 24 24">
-                 
+
  <a href="https://www.tiktok.com" class="social-link" target="_blank" rel="noopener noreferrer">
   <svg class="social-icon" viewBox="0 0 48 48" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
     <path d="M38.0766847,15.8542954 C36.0693906,15.7935177 34.2504839,14.8341149 32.8791434,13.5466056 C32.1316475,12.8317108 31.540171,11.9694126 31.1415066,11.0151329 C30.7426093,10.0603874 30.5453728,9.03391952 30.5619062,8 L24.9731521,8 L24.9731521,28.8295196 C24.9731521,32.3434487 22.8773693,34.4182737 20.2765028,34.4182737 C19.6505623,34.4320127 19.0283477,34.3209362 18.4461858,34.0908659 C17.8640239,33.8612612 17.3337909,33.5175528 16.8862248,33.0797671 C16.4386588,32.6422142 16.0833071,32.1196657 15.8404292,31.5426268 C15.5977841,30.9658208 15.4727358,30.3459348 15.4727358,29.7202272 C15.4727358,29.0940539 15.5977841,28.4746337 15.8404292,27.8978277 C16.0833071,27.3207888 16.4386588,26.7980074 16.8862248,26.3604545 C17.3337909,25.9229017 17.8640239,25.5791933 18.4461858,25.3491229 C19.0283477,25.1192854 19.6505623,25.0084418 20.2765028,25.0219479 C20.7939283,25.0263724 21.3069293,25.1167239 21.794781,25.2902081 L21.794781,19.5985278 C21.2957518,19.4900128 20.7869423,19.436221 20.2765028,19.4380839 C18.2431278,19.4392483 16.2560928,20.0426009 14.5659604,21.1729264 C12.875828,22.303019 11.5587449,23.9090873 10.7814424,25.7878401 C10.003907,27.666593 9.80084889,29.7339663 10.1981162,31.7275214 C10.5953834,33.7217752 11.5748126,35.5530237 13.0129853,36.9904978 C14.4509252,38.4277391 16.2828722,39.4064696 18.277126,39.8028054 C20.2711469,40.1991413 22.3382874,39.9951517 24.2163416,39.2169177 C26.0948616,38.4384508 27.7002312,37.1209021 28.8296253,35.4300711 C29.9592522,33.7397058 30.5619062,31.7522051 30.5619062,29.7188301 L30.5619062,18.8324027 C32.7275484,20.3418321 35.3149087,21.0404263 38.0766847,21.0867664 L38.0766847,15.8542954 Z"/>
@@ -441,7 +412,7 @@ last.fm
                 </svg>
                 tiktok
             </a>
-            
+
             <a href="mailto:daniel@lawyerdog.cc" class="social-link">
 <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-envelope" viewBox="0 0 16 16">
   <path d="M0 4a2 2 0 0 1 2-2h12a2 2 0 0 1 2 2v8a2 2 0 0 1-2 2H2a2 2 0 0 1-2-2zm2-1a1 1 0 0 0-1 1v.217l7 4.2 7-4.2V4a1 1 0 0 0-1-1zm13 2.383-4.708 2.825L15 11.105zm-.034 6.876-5.64-3.471L8 9.583l-1.326-.795-5.64 3.47A1 1 0 0 0 2 13h12a1 1 0 0 0 .966-.741M1 11.105l4.708-2.897L1 5.383z"/>
@@ -449,10 +420,9 @@ last.fm
                 email
             </a>
         </div>
-        
-       <div class="footer">
-            <p>email, or contact me via discord; lawyerkat <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-discord" viewBox="0 0 16 16">
-  <path d="M13.545 2.907a13.2 13.2 0 0 0-3.257-1.011.05.05 0 0 0-.052.025c-.141.25-.297.577-.406.833a12.2 12.2 0 0 0-3.658 0 8 8 0 0 0-.412-.833.05.05 0 0 0-.052-.025c-1.125.194-2.22.534-3.257 1.011a.04.04 0 0 0-.021.018C.356 6.024-.213 9.047.066 12.032q.003.022.021.037a13.3 13.3 0 0 0 3.995 2.02.05.05 0 0 0 .056-.019q.463-.63.818-1.329a.05.05 0 0 0-.01-.059l-.018-.011a9 9 0 0 1-1.248-.595.05.05 0 0 1-.02-.066l.015-.019q.127-.095.248-.195a.05.05 0 0 1 .051-.007c2.619 1.196 5.454 1.196 8.041 0a.05.05 0 0 1 .053.007q.121.1.248.195a.05.05 0 0 1-.004.085 8 8 0 0 1-1.249.594.05.05 0 0 0-.03.03.05.05 0 0 0 .003.041c.24.465.515.909.817 1.329a.05.05 0 0 0 .056.019 13.2 13.2 0 0 0 4.001-2.02.05.05 0 0 0 .021-.037c.334-3.451-.559-6.449-2.366-9.106a.03.03 0 0 0-.02-.019m-8.198 7.307c-.789 0-1.438-.724-1.438-1.612s.637-1.613 1.438-1.613c.807 0 1.45.73 1.438 1.613 0 .888-.637 1.612-1.438 1.612m5.316 0c-.788 0-1.438-.724-1.438-1.612s.637-1.613 1.438-1.613c.807 0 1.451.73 1.438 1.613 0 .888-.631 1.612-1.438 1.612"/>
+
+        <div class="footer">
+            <p>email, or contact me via discord; lawyerkat <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-discord" viewBox="0 0 16 16"> <path d="M13.545 2.907a13.2 13.2 0 0 0-3.257-1.011.05.05 0 0 0-.052.025c-.141.25-.297.577-.406.833a12.2 12.2 0 0 0-3.658 0 8 8 0 0 0-.412-.833.05.05 0 0 0-.052-.025c-1.125.194-2.22.534-3.257 1.011a.04.04 0 0 0-.021.018C.356 6.024-.213 9.047.066 12.032q.003.022.021.037a13.3 13.3 0 0 0 3.995 2.02.05.05 0 0 0 .056-.019q.463-.63.818-1.329a.05.05 0 0 0-.01-.059l-.018-.011a9 9 0 0 1-1.248-.595.05.05 0 0 1-.02-.066l.015-.019q.127-.095.248-.195a.05.05 0 0 1 .051-.007c2.619 1.196 5.454 1.196 8.041 0a.05.05 0 0 1 .053.007q.121.1.248.195a.05.05 0 0 1-.004.085 8 8 0 0 1-1.249.594.05.05 0 0 0-.03.03.05.05 0 0 0 .003.041c.24.465.515.909.817 1.329a.05.05 0 0 0 .056.019 13.2 13.2 0 0 0 4.001-2.02.05.05 0 0 0 .021-.037c.334-3.451-.559-6.449-2.366-9.106a.03.03 0 0 0-.02-.019m-8.198 7.307c-.789 0-1.438-.724-1.438-1.612s.637-1.613 1.438-1.613c.807 0 1.45.73 1.438 1.613 0 .888-.637 1.612-1.438 1.612m5.316 0c-.788 0-1.438-.724-1.438-1.612s.637-1.613 1.438-1.613c.807 0 1.451.73 1.438 1.613 0 .888-.631 1.612-1.438 1.612"/>
 </svg><p>
             <p>june 29 2007 <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-balloon-heart" viewBox="0 0 16 16">
   <path fill-rule="evenodd" d="m8 2.42-.717-.737c-1.13-1.161-3.243-.777-4.01.72-.35.685-.451 1.707.236 3.062C4.16 6.753 5.52 8.32 8 10.042c2.479-1.723 3.839-3.29 4.491-4.577.687-1.355.587-2.377.236-3.061-.767-1.498-2.88-1.882-4.01-.721zm-.49 8.5c-10.78-7.44-3-13.155.359-10.063q.068.062.132.129.065-.067.132-.129c3.36-3.092 11.137 2.624.357 10.063l.235.468a.25.25 0 1 1-.448.224l-.008-.017c.008.11.02.202.037.29.054.27.161.488.419 1.003.288.578.235 1.15.076 1.629-.157.469-.422.867-.588 1.115l-.004.007a.25.25 0 1 1-.416-.278c.168-.252.4-.6.533-1.003.133-.396.163-.824-.049-1.246l-.013-.028c-.24-.48-.38-.758-.448-1.102a3 3 0 0 1-.052-.45l-.04.08a.25.25 0 1 1-.447-.224l.235-.468ZM6.013 2.06c-.649-.18-1.483.083-1.85.798-.131.258-.245.689-.08 1.335.063.244.414.198.487-.043.21-.697.627-1.447 1.359-1.692.217-.073.304-.337.084-.398"/>
@@ -466,31 +436,31 @@ last.fm
         <div class="location-display">UTC-8
     </div>
     <script>
-    
+
            function updateClock() {
             const now = new Date();
-            
+
             // Convert to Los Angeles time (Pacific Time)
             const laTime = new Date(now.toLocaleString("en-US", {timeZone: "America/Los_Angeles"}));
-            
+
             // Get hours, minutes, seconds
             let hours = laTime.getHours();
             let minutes = laTime.getMinutes();
             let seconds = laTime.getSeconds();
-            
+
             // Convert to 12-hour format
             const ampm = hours >= 12 ? 'PM' : 'AM';
             hours = hours % 12;
             hours = hours ? hours : 0; // 0 should be 12
-            
+
             // Add leading zeros
             minutes = minutes.toString().padStart(2, '0');
-            
+
             // Update display
             document.getElementById('hours').textContent = hours;
             document.getElementById('minutes').textContent = minutes;
             document.getElementById('seconds').textContent = seconds + ' ' + ampm;
-            
+
             // Update date
             const options = { 
                 year: 'numeric', 

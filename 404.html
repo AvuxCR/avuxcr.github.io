@@ -1,31 +1,25 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
+<link href='https://fonts.googleapis.com/css?family=Doto' rel='stylesheet'>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Your Name - Personal Page</title>
+    <title>lawyerdog/cat/kat</title>
+  <meta name="description" content="about me/project website">
+    <meta property="og:title" content="lawyerdog/cat/kat" />
+  <meta property="og:description" content="about me/project website" />
+  <meta property="og:url" content="https://lawyerdog.cc" />
+  <meta property="og:type" content="website" />
+  <meta property="og:image" content="  https://avatars.githubusercontent.com/u/99319957?s=400&u=e1f52f1ea2c21672b9939c025f7342d0af4dca79&v=4" />
     <style>
-    @keyframes float {
-  0% {
-    transform: translateY(0) rotate(0deg);
-    opacity: 1;
-  }
-  50% {
-    transform: translateY(-20px) rotate(5deg);
-    opacity: 0.8;
-  }
-  100% {
-    transform: translateY(0) rotate(0deg);
-    opacity: 1;
-  }
-}
         * {
             margin: 0;
             padding: 0;
             box-sizing: border-box;
         }
-        body {
-            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI';
+
+       body {
+    font-family: 'Doto';font-size: 18px;
             background: #0a0a0a;
             color: #ffffff;
             min-height: 100vh;
@@ -35,8 +29,9 @@
             padding: 2rem;
             overflow-x: hidden;
             position: relative;
-        }
-   .background-animation {
+             }
+
+        .background-animation {
             position: fixed;
             top: 0;
             left: 0;
@@ -44,8 +39,8 @@
             height: 100%;
             overflow: hidden;
             z-index: -1;
-        
         }
+
         .floating-shape {
             position: absolute;
             border-radius: 50%;
@@ -54,9 +49,10 @@
                 rgba(30, 144, 255, 0.3), 
                 rgba(255, 20, 147, 0.3)
             );
-            filter: blur(20px);
+            filter: blur(100px);
             animation: float 20s infinite ease-in-out;
         }
+
         .floating-shape:nth-child(1) {
             width: 300px;
             height: 300px;
@@ -64,6 +60,7 @@
             left: 10%;
             animation-delay: 0s;
         }
+
         .floating-shape:nth-child(2) {
             width: 200px;
             height: 200px;
@@ -71,6 +68,7 @@
             right: 15%;
             animation-delay: -7s;
         }
+
         .floating-shape:nth-child(3) {
             width: 250px;
             height: 250px;
@@ -78,6 +76,7 @@
             left: 20%;
             animation-delay: -14s;
         }
+
         .floating-shape:nth-child(4) {
             width: 180px;
             height: 180px;
@@ -85,63 +84,424 @@
             right: 40%;
             animation-delay: -3s;
         }
+
         .floating-shape:nth-child(5) {
-            width: 300px;
-            height: 300px;
+            width: 150px;
+            height: 150px;
             bottom: 40%;
             right: 20%;
             animation-delay: -10s;
-		}
-.floating-shape:nth-child(6) {
-  width: 180px;
-  height: 180px;
-  bottom: 35%;
-  right: 65%;
-  animation-delay: -7s;
-}
+        }
 
-.floating-shape:nth-child(7) {
-  width: 210px;
-  height: 210px;
-  bottom: 50%;
-  right: 30%;
-  animation-delay: -12s;
-}
+        @keyframes float {
+            0%, 100% { transform: translateY(0px) rotate(0deg); }
+            33% { transform: translateY(-30px) rotate(120deg); }
+            66% { transform: translateY(20px) rotate(240deg); }
+        }
 
-.floating-shape:nth-child(8) {
-  width: 220px;
-  height: 220px;
-  bottom: 70%;
-  right: 20%;
-  animation-delay: -4s;
-}
 
-.floating-shape:nth-child(9) {
-  width: 180px;
-  height: 180px;
-  bottom: 25%;
-  right: 50%;
-  animation-delay: -9s;
-}
+        .container {
+            max-width: 650px;
+            width: 100%;
+            background: rgba(255, 255, 255, 0.08);
+            backdrop-filter: blur(25px);
+            -webkit-backdrop-filter: blur(25px);
+            border-radius: 30px;
+            padding: 4rem 3rem;
+            box-shadow: 
+                0 8px 32px rgba(0, 0, 0, 0.4),
+                inset 0 0px 0 rgba(255, 255, 255, 0.1),
+                0 0 80px rgba(138, 43, 226, 0.1);
+            border: 0px solid rgba(255, 255, 255, 0.05);
+            text-align: center;
+            position: relative;
+            overflow: hidden;
+        }
+
+
+
+        .profile-image {
+            width: 160px;
+            height: 160px;
+            border-radius: 50%;
+            margin: 0 auto 2rem;
+            background: linear-gradient(135deg, 
+                rgba(42, 1, 52, 0.3), 
+                rgba(30, 144, 255, 0.2)
+            );
+            display: flex;
+            align-items:center;
+            justify-content: center;
+            font-size: 4rem;
+            color: white;
+            box-shadow: 
+                0 0px 32px rgba(0, 0, 0, 0.3),
+                inset 0 0px 0 rgba(255, 255, 255, 0.2);
+            backdrop-filter: blur(10px);
+            position: relative;
+            overflow: hidden;
+        }
+
+        .profile-image::before {
+            content: '';
+            position: absolute;
+            top: -50%;
+            left: -50%;
+            width: 200%;
+            height: 200%;
+            background: linear-gradient(45deg, 
+                transparent, 
+                rgba(255, 255, 255, 0.1), 
+                transparent
+            );
+
+        }
+
+        h1 {
+            font-size: 2.8rem;
+            margin-bottom: 0.5rem;
+            background: linear-gradient(135deg, 
+                #ffffff, 
+                #e0e0e0, 
+                #ffffff
+            );
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+            font-weight: 700;
+            text-shadow: 0 0 30px rgba(255, 255, 255, 0.5);
+        }
+
+        .subtitle {
+            font-size: 1.3rem;
+            color: rgba(255, 255, 255, 0.8);
+            margin-bottom: 2.5rem;
+            font-weight: 300;
+        }
+
+        .bio {
+            font-size: 1.05rem;
+            line-height: 1.6;
+            color: rgba(255, 255, 255, 1);
+            margin-bottom: 3rem;
+            max-width: 500px;
+            margin-left: auto;
+            margin-right: auto;
+            background: rgba(255, 255, 255, 0.05);
+            backdrop-filter: blur(10px);
+            padding: 2rem;
+            border-radius: 20px;
+        }
+
+        .social-links {
+            display: flex;
+            justify-content: center;
+            gap: 1rem;
+            flex-wrap: wrap;
+            margin-bottom: 2rem;
+        }
+
+        .social-link {
+            display: flex;
+            align-items: center;
+            gap: 0.5rem;
+            padding: 1rem 1.5rem;
+            background: rgba(255, 255, 255, 0.1);
+            backdrop-filter: blur(15px);
+            -webkit-backdrop-filter: blur(15px);
+            border-radius: 20px;
+            text-decoration: none;
+            color: rgba(255, 255, 255, 0.9);
+            transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+            font-weight: 500;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .social-link::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: -100%;
+            width: 100%;
+            height: 100%;
+            background: linear-gradient(90deg, 
+                transparent, 
+                rgba(255, 255, 255, 0.2), 
+                transparent
+            );
+            transition: left 0s ease;
+        }
+
+        .social-link:hover::before {
+            left: 100%;
+        }
+
+        .social-link:hover {
+            background: rgba(255, 255, 255, 0.2);
+            transform: translateY(-1px) scale(1.01);
+            box-shadow: 
+                0 10px 40px rgba(0, 0, 0, 0.3),
+                0 0 20px rgba(67, 19, 112, 0.7);
+            color: white;
+            border-color: rgba(67, 19, 112, 0);
+        }
+
+        .social-icon {
+            width: 20px;
+            height: 20px;
+            fill: currentColor;
+           
+        }
+
+        .footer {
+            margin-top: 2rem;
+            padding-top: 2rem;
+            border-top: 0px solid rgba(255, 255, 255, 0.1);
+            font-size: 0.95rem;
+            color: rgba(255, 255, 255, 0.7);
+            background: rgba(255, 255, 255, 0.03);
+            backdrop-filter: blur(5px);
+            border-radius: 15px;
+            padding: 1.5rem;
+            margin: 2rem -1rem -1rem -1rem;
+        }
+
+        @keyframes particles {
+            0% { transform: translateY(100vh) rotate(0deg); opacity: 0; }
+            10% { opacity: 1; }
+            90% { opacity: 1; }
+            100% { transform: translateY(-100vh) rotate(360deg); opacity: 0; }
+        }
+
+        @media (max-width: 768px) {
+            .container {
+                padding: 2.5rem 2rem;
+                margin: 1rem;
+            }
+            
+            h1 {
+                font-size: 2.2rem;
+            }
+            
+            .social-links {
+                flex-direction: column;
+                align-items: center;
+                gap: 0.8rem;
+            }
+            
+            .social-link {
+                width: 100%;
+                max-width: 300px;
+                justify-content: center;
+            }
+
+            .bio {
+                padding: 1.5rem;
+            }
+        }
+        
+        
+          .clock-widget {
+            position: fixed;
+            bottom: 1rem;
+            right: 1rem;
+            background: rgba(255, 255, 255, 0.08);
+            backdrop-filter: blur(25px);
+            -webkit-backdrop-filter: blur(25px);
+            border-radius: 25px;
+            padding: 2rem 2.5rem;
+            text-align: center;
+            overflow: hidden;
+            min-width: 30px;
+            min-length: 60px;
+            transition: all 0.3s ease;
+            z-index: 1000;
+            color: rgba(255, 255, 255, 0.7);
+
+        }
+
+        .time-display {
+            font-size: 3rem;
+            font-weight: 700;
+            background: linear-gradient(135deg, 
+                #ffffff, 
+                #e0e0e0, 
+                #ffffff
+            );
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+            text-shadow: 0 0 00px rgba(255, 255, 255, 0.7)
+            margin-bottom: 0.5rem;
+            letter-spacing: 2px;
+        }
+
+        .date-display {
+            font-size: 1.1rem;
+            color: rgba(255, 255, 255, 0.7);
+            margin-bottom: 0.5rem;
+            font-weight: 300;
+        }
+        .seconds {
+            font-size: 1.5rem;
+            color: rgba(255, 255, 255, 0.7);
+            font-weight: 300;
+        }
+
+        .time-separator {
+            animation: blink 1s infinite;
+        }
+
+        @keyframes blink {
+            0%, 50% { opacity: 1; }
+            51%, 100% { opacity: 0.3; }
+
+        }
+
+        @media (max-width: 768px) {
+            .clock-widget {
+                bottom: 1rem;
+                right: 1rem;
+                padding: 1rem 1em;
+                min-width: 24px;
+            }
+            
+            .time-display {
+                font-size: 2rem;
+
+            }
+        }
+
+        @media (max-width: 480px) {
+            .clock-widget {
+                bottom: 1rem;
+                right: 1rem;
+                left: 1rem;
+                min-width: auto;
+            }
+            
+            .time-display {
+                font-size: 2em;
+            }
+        }
     </style>
 </head>
 <body>
-
     <div class="background-animation">
-      
-      <div class="floating-shape"></div>
         <div class="floating-shape"></div>
         <div class="floating-shape"></div>
         <div class="floating-shape"></div>
         <div class="floating-shape"></div>
         <div class="floating-shape"></div>
-        <div class="floating-shape"></div>
-        <div class="floating-shape"></div>
-        <div class="floating-shape"></div>
-        <div class="floating-shape"></div>
+    </div>
 
-</div>
+   <div class="container">
+        <div class="profile-image">
+            <img src="https://avatars.githubusercontent.com/u/99319957?s=400&u=e1f52f1ea2c21672b9939c025f7342d0af4dca79&v=4" style="width: 100%; height: 100%; object-fit: cover; border-radius: 50%;">
+        </div>
+        
+        <h1>daniel</h1>
+        <p class="subtitle"></p>
+        
+        <div class="bio">
+            hello, i am an 18 year old college student in california. i occasionally play video games. 
+        </div>
+        
+        <div class="social-links">
+            <a href="https://open.spotify.com/user/avux_7" class="social-link">
+             <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-spotify" viewBox="0 0 16 16">
+  <path d="M8 0a8 8 0 1 0 0 16A8 8 0 0 0 8 0m3.669 11.538a.5.5 0 0 1-.686.165c-1.879-1.147-4.243-1.407-7.028-.77a.499.499 0 0 1-.222-.973c3.048-.696 5.662-.397 7.77.892a.5.5 0 0 1 .166.686m.979-2.178a.624.624 0 0 1-.858.205c-2.15-1.321-5.428-1.704-7.972-.932a.625.625 0 0 1-.362-1.194c2.905-.881 6.517-.454 8.986 1.063a.624.624 0 0 1 .206.858m.084-2.268C10.154 5.56 5.9 5.419 3.438 6.166a.748.748 0 1 1-.434-1.432c2.825-.857 7.523-.692 10.492 1.07a.747.747 0 1 1-.764 1.288"/>
+</svg>
+                spotify
+            </a>
+            <a href="https://www.instagram.com/danniel_.o/" class="social-link">
+                <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-instagram" viewBox="0 0 16 16">
+  <path d="M8 0C5.829 0 5.556.01 4.703.048 3.85.088 3.269.222 2.76.42a3.9 3.9 0 0 0-1.417.923A3.9 3.9 0 0 0 .42 2.76C.222 3.268.087 3.85.048 4.7.01 5.555 0 5.827 0 8.001c0 2.172.01 2.444.048 3.297.04.852.174 1.433.372 1.942.205.526.478.972.923 1.417.444.445.89.719 1.416.923.51.198 1.09.333 1.942.372C5.555 15.99 5.827 16 8 16s2.444-.01 3.298-.048c.851-.04 1.434-.174 1.943-.372a3.9 3.9 0 0 0 1.416-.923c.445-.445.718-.891.923-1.417.197-.509.332-1.09.372-1.942C15.99 10.445 16 10.173 16 8s-.01-2.445-.048-3.299c-.04-.851-.175-1.433-.372-1.941a3.9 3.9 0 0 0-.923-1.417A3.9 3.9 0 0 0 13.24.42c-.51-.198-1.092-.333-1.943-.372C10.443.01 10.172 0 7.998 0zm-.717 1.442h.718c2.136 0 2.389.007 3.232.046.78.035 1.204.166 1.486.275.373.145.64.319.92.599s.453.546.598.92c.11.281.24.705.275 1.485.039.843.047 1.096.047 3.231s-.008 2.389-.047 3.232c-.035.78-.166 1.203-.275 1.485a2.5 2.5 0 0 1-.599.919c-.28.28-.546.453-.92.598-.28.11-.704.24-1.485.276-.843.038-1.096.047-3.232.047s-2.39-.009-3.233-.047c-.78-.036-1.203-.166-1.485-.276a2.5 2.5 0 0 1-.92-.598 2.5 2.5 0 0 1-.6-.92c-.109-.281-.24-.705-.275-1.485-.038-.843-.046-1.096-.046-3.233s.008-2.388.046-3.231c.036-.78.166-1.204.276-1.486.145-.373.319-.64.599-.92s.546-.453.92-.598c.282-.11.705-.24 1.485-.276.738-.034 1.024-.044 2.515-.045zm4.988 1.328a.96.96 0 1 0 0 1.92.96.96 0 0 0 0-1.92m-4.27 1.122a4.109 4.109 0 1 0 0 8.217 4.109 4.109 0 0 0 0-8.217m0 1.441a2.667 2.667 0 1 1 0 5.334 2.667 2.667 0 0 1 0-5.334"/>
+</svg>
+                instagram         
+            </a>
+            
+            <a href="https://www.last.fm/user/lawyerdawg" class="social-link">
+<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-vinyl" viewBox="0 0 16 16">
+  <path d="M8 15A7 7 0 1 1 8 1a7 7 0 0 1 0 14m0 1A8 8 0 1 0 8 0a8 8 0 0 0 0 16"/>
+  <path d="M8 6a2 2 0 1 0 0 4 2 2 0 0 0 0-4M4 8a4 4 0 1 1 8 0 4 4 0 0 1-8 0"/>
+  <path d="M9 8a1 1 0 1 1-2 0 1 1 0 0 1 2 0"/>
+</svg>
+last.fm
+            </a>    
+            <a href="https://www.tiktok.com/@.lawyerdog" class="social-link">
+                <svg class="social-icon" viewBox="0 0 24 24">
+                 
+ <a href="https://www.tiktok.com" class="social-link" target="_blank" rel="noopener noreferrer">
+  <svg class="social-icon" viewBox="0 0 48 48" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
+    <path d="M38.0766847,15.8542954 C36.0693906,15.7935177 34.2504839,14.8341149 32.8791434,13.5466056 C32.1316475,12.8317108 31.540171,11.9694126 31.1415066,11.0151329 C30.7426093,10.0603874 30.5453728,9.03391952 30.5619062,8 L24.9731521,8 L24.9731521,28.8295196 C24.9731521,32.3434487 22.8773693,34.4182737 20.2765028,34.4182737 C19.6505623,34.4320127 19.0283477,34.3209362 18.4461858,34.0908659 C17.8640239,33.8612612 17.3337909,33.5175528 16.8862248,33.0797671 C16.4386588,32.6422142 16.0833071,32.1196657 15.8404292,31.5426268 C15.5977841,30.9658208 15.4727358,30.3459348 15.4727358,29.7202272 C15.4727358,29.0940539 15.5977841,28.4746337 15.8404292,27.8978277 C16.0833071,27.3207888 16.4386588,26.7980074 16.8862248,26.3604545 C17.3337909,25.9229017 17.8640239,25.5791933 18.4461858,25.3491229 C19.0283477,25.1192854 19.6505623,25.0084418 20.2765028,25.0219479 C20.7939283,25.0263724 21.3069293,25.1167239 21.794781,25.2902081 L21.794781,19.5985278 C21.2957518,19.4900128 20.7869423,19.436221 20.2765028,19.4380839 C18.2431278,19.4392483 16.2560928,20.0426009 14.5659604,21.1729264 C12.875828,22.303019 11.5587449,23.9090873 10.7814424,25.7878401 C10.003907,27.666593 9.80084889,29.7339663 10.1981162,31.7275214 C10.5953834,33.7217752 11.5748126,35.5530237 13.0129853,36.9904978 C14.4509252,38.4277391 16.2828722,39.4064696 18.277126,39.8028054 C20.2711469,40.1991413 22.3382874,39.9951517 24.2163416,39.2169177 C26.0948616,38.4384508 27.7002312,37.1209021 28.8296253,35.4300711 C29.9592522,33.7397058 30.5619062,31.7522051 30.5619062,29.7188301 L30.5619062,18.8324027 C32.7275484,20.3418321 35.3149087,21.0404263 38.0766847,21.0867664 L38.0766847,15.8542954 Z"/>
+  </svg>
+                </svg>
+                tiktok
+            </a>
+            
+            <a href="mailto:daniel@lawyerdog.cc" class="social-link">
+<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-envelope" viewBox="0 0 16 16">
+  <path d="M0 4a2 2 0 0 1 2-2h12a2 2 0 0 1 2 2v8a2 2 0 0 1-2 2H2a2 2 0 0 1-2-2zm2-1a1 1 0 0 0-1 1v.217l7 4.2 7-4.2V4a1 1 0 0 0-1-1zm13 2.383-4.708 2.825L15 11.105zm-.034 6.876-5.64-3.471L8 9.583l-1.326-.795-5.64 3.47A1 1 0 0 0 2 13h12a1 1 0 0 0 .966-.741M1 11.105l4.708-2.897L1 5.383z"/>
+</svg>
+                email
+            </a>
+        </div>
+        
+        <div class="footer">
+            <p>enail, or contact me via discord; lawyerkat<p>
+            <p>june 29 2007 
+          <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-balloon-heart" viewBox="0 0 16 16">
+  <path fill-rule="evenodd" d="m8 2.42-.717-.737c-1.13-1.161-3.243-.777-4.01.72-.35.685-.451 1.707.236 3.062C4.16 6.753 5.52 8.32 8 10.042c2.479-1.723 3.839-3.29 4.491-4.577.687-1.355.587-2.377.236-3.061-.767-1.498-2.88-1.882-4.01-.721zm-.49 8.5c-10.78-7.44-3-13.155.359-10.063q.068.062.132.129.065-.067.132-.129c3.36-3.092 11.137 2.624.357 10.063l.235.468a.25.25 0 1 1-.448.224l-.008-.017c.008.11.02.202.037.29.054.27.161.488.419 1.003.288.578.235 1.15.076 1.629-.157.469-.422.867-.588 1.115l-.004.007a.25.25 0 1 1-.416-.278c.168-.252.4-.6.533-1.003.133-.396.163-.824-.049-1.246l-.013-.028c-.24-.48-.38-.758-.448-1.102a3 3 0 0 1-.052-.45l-.04.08a.25.25 0 1 1-.447-.224l.235-.468ZM6.013 2.06c-.649-.18-1.483.083-1.85.798-.131.258-.245.689-.08 1.335.063.244.414.198.487-.043.21-.697.627-1.447 1.359-1.692.217-.073.304-.337.084-.398"/>
+</svg><p>
+        </div>
+    </div>
+    <div class="clock-widget">
+        <div class="time-display" id="time">
+            <span id="hours">00</span>
+        </div>
+        <div class="location-display">utc-8
+    </div>
+    <script>
+    
+           function updateClock() {
+            const now = new Date();
+            
+            // Convert to Los Angeles time (Pacific Time)
+            const laTime = new Date(now.toLocaleString("en-US", {timeZone: "America/Los_Angeles"}));
+            
+            // Get hours, minutes, seconds
+            let hours = laTime.getHours();
+            let minutes = laTime.getMinutes();
+            let seconds = laTime.getSeconds();
+            
+            // Convert to 12-hour format
+            const ampm = hours >= 12 ? 'PM' : 'AM';
+            hours = hours % 12;
+            hours = hours ? hours : 0; // 0 should be 12
+            
+            // Add leading zeros
+            minutes = minutes.toString().padStart(2, '0');
+            
+            // Update display
+            document.getElementById('hours').textContent = hours;
+            document.getElementById('minutes').textContent = minutes;
+            document.getElementById('seconds').textContent = seconds + ' ' + ampm;
+            
+            // Update date
+            const options = { 
+                year: 'numeric', 
+                month: 'numeric', 
+                day: 'numeric',
+                timeZone: 'America/Los_Angeles'
+            };
+            document.getElementById('date').textContent = now.toLocaleDateString('en-US', options);
+        }
 
+        // Update clock immediately and then every second
+        updateClock();
+        setInterval(updateClock, 1000);
     </script>
 </body>
 </html>

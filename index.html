@@ -2,7 +2,6 @@
 <html lang="en">
 <head>
 <link href="https://fonts.googleapis.com/css2?family=Inconsolata:wght@200..900&display=swap" rel="stylesheet">
-    <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>lawyerdog/cat/kat</title>
   <meta name="description" content="about me/project website">
@@ -17,11 +16,10 @@
             padding: 0;
             box-sizing: border-box;
         }
-
   	     body {
 			font-family: "Inconsolata", monospace;
  			font-size: 18px;
-			background: radial-gradient(#001F3F, #FFFFFF);
+            background: radial-gradient(circle, #001F3F, #ffffff);
 			color: rgba(255, 187, 200, 0.7);
             min-height: 100vh;
             display: flex;
@@ -107,12 +105,12 @@
 }
 
         .container {
-            max-width: 450px;
+            max-width: 400px;
             max-height: auto;
             width: 100%;
             background: rgba(255, 255, 255, 0.07);
 			backdrop-filter: blur(10px);
-			-webkit-backdrop-filter: blur(10px);
+			-webkit-backdrop-filter: blur(50px);
             border-radius: 50px;
             padding: 4rem 3rem;
             border: 1px solid rgba(255, 255, 255, 0.01);
@@ -128,17 +126,12 @@
             height: 170px;
             border-radius: 50%;
             margin: 0 auto 2rem;
-
             );
             display: flex;
             align-items:center;
             justify-content: center;
             font-size: 4rem;
             color: white;
-            box-shadow: 
-                0 2px 32px rgba(0, 0, 0, 0.35),
-                inset 0 0px 0 rgba(255, 255, 255, 0.2);
-            backdrop-filter: blur(10px);
             position: relative;
             overflow: hidden;
        
@@ -154,9 +147,9 @@
                 #ffffff
             );
             -webkit-background-clip: text;
-            -webkit-text-fill-color: transparent;
+            -webkit-text-fill-color: white;
             background-clip: text;
-            font-weight: 700;
+            font-weight: 600;
             text-shadow: 0 0 30px rgba(255, 255, 255, 0.5);
         }
 
@@ -244,13 +237,13 @@
             }
 
             .social-links {
-                flex-direction: column;
+                flex-direction: row;
                 align-items: center;
                 gap: 0.8rem;
             }
 
             .social-link {
-                width: 100%;
+                width: 90%;
                 max-width: 300px;
                 justify-content: center;
             }
@@ -307,7 +300,7 @@
 
             <a href="mailto:daniel@lawyerdog.cc" class="social-link">
 <svg xmlns="http://www.w3.org/2000/svg" width="28" height="28" fill="currentColor" class="bi bi-envelope-heart" viewBox="0 0 17 16">
-  <path fill-rule="evenodd" d="M0 4a2 2 0 0 1 2-2h12a2 2 0 0 1 2 2v8a2 2 0 0 1-2 2H2a2 2 0 0 1-2-2zm2-1a1 1 0 0 0-1 1v.217l3.235 1.94a2.8 2.8 0 0 0-.233 1.027L1 5.384v5.721l3.453-2.124q.219.416.55.835l-3.97 2.443A1 1 0 0 0 2 13h12a1 1 0 0 0 .966-.741l-3.968-2.442q.33-.421.55-.836L15 11.105V5.383l-3.002 1.801a2.8 2.8 0 0 0-.233-1.026L15 4.217V4a1 1 0 0 0-1-1zm6 2.993c1.664-1.711 5.825 1.283 0 5.132-5.825-3.85-1.664-6.843 0-5.132"/>
+  <path fill-rule="evenodd" d="M2 2a2 2 0 0 1 2-2h8a2 2 0 0 1 2 2v1.133l.941.502A2 2 0 0 1 16 5.4V14a2 2 0 0 1-2 2H2a2 2 0 0 1-2-2V5.4a2 2 0 0 1 1.059-1.765L2 3.133zm0 2.267-.47.25A1 1 0 0 0 1 5.4v.817l1 .6zm1 3.15 3.75 2.25L8 8.917l1.25.75L13 7.417V2a1 1 0 0 0-1-1H4a1 1 0 0 0-1 1zm11-.6 1-.6V5.4a1 1 0 0 0-.53-.882L14 4.267zM8 2.982C9.664 1.309 13.825 4.236 8 8 2.175 4.236 6.336 1.31 8 2.982m7 4.401-4.778 2.867L15 13.117zm-.035 6.88L8 10.082l-6.965 4.18A1 1 0 0 0 2 15h12a1 1 0 0 0 .965-.738ZM1 13.116l4.778-2.867L1 7.383v5.734Z"/>
 </svg>
                 
             </a>
@@ -317,6 +310,7 @@
   <path fill-rule="evenodd" d="m8 2.42-.717-.737c-1.13-1.161-3.243-.777-4.01.72-.35.685-.451 1.707.236 3.062C4.16 6.753 5.52 8.32 8 10.042c2.479-1.723 3.839-3.29 4.491-4.577.687-1.355.587-2.377.236-3.061-.767-1.498-2.88-1.882-4.01-.721zm-.49 8.5c-10.78-7.44-3-13.155.359-10.063q.068.062.132.129.065-.067.132-.129c3.36-3.092 11.137 2.624.357 10.063l.235.468a.25.25 0 1 1-.448.224l-.008-.017c.008.11.02.202.037.29.054.27.161.488.419 1.003.288.578.235 1.15.076 1.629-.157.469-.422.867-.588 1.115l-.004.007a.25.25 0 1 1-.416-.278c.168-.252.4-.6.533-1.003.133-.396.163-.824-.049-1.246l-.013-.028c-.24-.48-.38-.758-.448-1.102a3 3 0 0 1-.052-.45l-.04.08a.25.25 0 1 1-.447-.224l.235-.468ZM6.013 2.06c-.649-.18-1.483.083-1.85.798-.131.258-.245.689-.08 1.335.063.244.414.198.487-.043.21-.697.627-1.447 1.359-1.692.217-.073.304-.337.084-.398"/>
 </svg> 
         </div>
+        
     </div>
  
 </body>
